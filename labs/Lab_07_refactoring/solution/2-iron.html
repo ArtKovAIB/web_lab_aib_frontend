@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset ="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>JS</title>
+</head>
+<body>
+<script>
+	let f = new Array('apple', 'strawberry', 'blueberry', 'raspberry', 'lemon');
+	console.log("First fruit:\t" + f[0]);
+	console.log("Second fruit:\t" + f[1]);
+	console.log("Third fruit:\t" + f[2]);
+	console.log("Fourth fruit:\t" + f[3]);
+ 	console.log("Fifth fruit:\t" + f[4]);
+	
+	console.log("\n")
+
+	for( let i = 0; i < f.length; i++) {
+		if (f[i] === 'apple') console.log('apple is green');
+		else if (f[i] === 'strawberry') console.log('strawberry is red');
+		else if (f[i] === 'blueberry')  console.log('blueberry is blue');
+		else if (f[i] === 'raspberry') console.log('raspberry is light red');
+		else if (f[i] === 'lemon') console.log('lemon is yellow');
+	}
+</script>
+</body>
+</html>

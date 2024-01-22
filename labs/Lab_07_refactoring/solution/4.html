@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset = "UTF-8"/>
+	<meta name = "viewport" content = "width=device-width, initial-scale = 1.0"/>
+	<title>JS</title>
+</head>
+<body>
+<script>
+	let studentsClass = [ {FIO: 'Petrov A.A.', grade: 5},
+    		{FIO: 'Ivanov B.B.', grade: 3.4}, {FIO: 'Sidorov G.G.', grade: 9},
+    		{FIO: 'Nemolodoi D.D.', grade: 2}, {FIO: 'Molodoi E.E.', grade: 3.4} ];
+
+	let averageGrade = 0;
+	let studentsNumber = 0;
+	let badStudents = [];
+
+	for (let currentStudentIndex = 0; currentStudentIndex < studentsClass.length; currentStudentIndex++) {
+		if (studentsClass[currentStudentIndex].grade > 5) {
+			console.log('This number is not going to be count, it doesn\'t match allowed values');
+		}
+
+		if (studentsClass[currentStudentIndex].grade < 0) {
+			console.log('This number is not going to be count, it doesn\'t match allowed values');
+		}
+
+		if ( !( (studentsClass[currentStudentIndex].grade <= 5) && 
+			(studentsClass[currentStudentIndex].grade >= 0) ) ) continue;
+
+		if (studentsClass[currentStudentIndex].grade < 4) { 
+			badStudents.push(studentsClass[currentStudentIndex])
+		}
+		averageGrade = averageGrade + studentsClass[currentStudentIndex].grade;
+		studentsNumber = studentsNumber + 1;
+	}
+	
+	averageGrade = averageGrade / studentsNumber;
+	console.log('Average grade: ' + averageGrade);
+	console.log('Bad students:');
+	badStudents.forEach( (student) => {
+		console.log('\tFio: '+ student.FIO + '; Grade: '+ student.grade);
+	});
+</script>
+</body>
+</html>

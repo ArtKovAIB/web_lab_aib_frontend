@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset ="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>JS</title>
+</head>
+<body>
+<script>
+	let humansNumber = prompt('Enter the number of humans: ', undefined);
+	
+	if (!isNaN(parseFloat(humansNumber))) {
+		humansNumber = parseFloat(humansNumber);
+	} else humansNumber = 0;
+	
+	while(humansNumber === 0) {
+		let humansNumber = prompt('Enter the number of humans: ', undefined);
+		if ( !isNaN(parseFloat(humansNumber)) ) {
+        		humansNumber = parseFloat(humansNumber);
+		} else humansNumber = 0;
+	}
+	
+	let salary = prompt('Enter the salary per person: ', undefined);
+	
+	if ( !isNaN(parseFloat(salary)) ) {
+		salary = parseFloat(salary);
+	} else salary = 0;
+	
+	while(humansNumber === 0) {
+    		let salary = prompt('Enter the salary per person: ', undefined);
+		if ( !isNaN(parseFloat(salary)) ) {
+			salary = parseFloat(salary)
+		} else salary = 0;
+	}
+	
+	alert('Salary expenses: ' + humansNumber * salary);
+</script>
+</body>
+</html>
